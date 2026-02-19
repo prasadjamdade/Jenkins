@@ -1,0 +1,17 @@
+pipeline {
+    agent any 
+    stages {
+        stage('Existing Shell Script') {
+            steps {
+                // Call your bash script directly
+                sh './my_reporting_script.sh'
+            }
+        }
+        stage('Existing Python Script') {
+            steps {
+                // Call your python script directly
+                sh 'python3 my_automation.py'
+            }
+        }
+    }
+}
