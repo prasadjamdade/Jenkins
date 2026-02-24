@@ -4,13 +4,7 @@ pipeline {
         stage('Existing Shell Script') {
             steps {
                 // Call your bash script directly
-                //sh 'bash my_reporting_script.sh'
-                sh '''
-                pwd
-                ls -la
-                sed -i 's/\r$//' my_reporting_script.sh
-                bash my_reporting_script.sh
-                '''
+                sh "sed -i 's/\\r\$//' *.sh && chmod +x *.sh && ./my_reporting_script.sh"
             }
         }
         stage('Existing Python Script') {
