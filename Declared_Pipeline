@@ -14,6 +14,9 @@ pipeline {
             }
         }
         stage('Existing Python Script') {
+            agent { 
+                docker { image 'python:3-slim' } 
+            }
             steps {
                 // Call your python script directly
                 sh 'python3 my_automation.py'
