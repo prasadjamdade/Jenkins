@@ -4,7 +4,7 @@ pipeline {
         stage('Existing Shell Script') {
             steps {
                 // Call your bash script directly
-                sh './my_reporting_script.sh'
+                sh 'bash my_reporting_script.sh'
             }
         }
         stage('Existing Python Script') {
