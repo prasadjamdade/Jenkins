@@ -1,2 +1,2 @@
 x="Say Bye!"
-echo(x)
+echo "$x"
