@@ -16,7 +16,7 @@ pipeline {
         stage('Existing Python Script') {
             steps {
                 // Call your python script directly
-                sh 'python3 my_automation.py'
+                bat 'py my_automation.py'
             }
         }
     }
